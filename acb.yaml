@@ -1,0 +1,4 @@
+steps:
+  - build: --build-arg test_arg={{.Values.TEST_ARG}} -f Dockerfile -t {{.Run.Registry}}/test:values .
+  - push: 
+    - {{.Run.Registry}}/test:values
